@@ -233,11 +233,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000014247240796, guid: 35bd8a915cb44194eac836447714f105, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.398924
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4000014247240796, guid: 35bd8a915cb44194eac836447714f105, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000014247240796, guid: 35bd8a915cb44194eac836447714f105, type: 2}
       propertyPath: m_LocalPosition.z
@@ -401,10 +401,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1053929264}
-  m_LocalRotation: {x: 0.086200155, y: 0.014400165, z: 0.001246065, w: 0.99617296}
-  m_LocalPosition: {x: 0, y: 3.97, z: -5.31}
+  m_LocalRotation: {x: 0.16399854, y: 0.014453529, z: 0.00011378835, w: 0.9863547}
+  m_LocalPosition: {x: 0.02, y: 4.94, z: -4.32}
   m_LocalScale: {x: 1, y: 5, z: 1}
-  m_LocalEulerAnglesHint: {x: 9.831, y: 1.6320001, z: 0.28}
+  m_LocalEulerAnglesHint: {x: 18.831001, y: 1.6780001, z: 0.29200003}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2052552047}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 3, z: -5}
 --- !u!1 &1096807896
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ Transform:
   m_GameObject: {fileID: 1096807896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.22130585, y: 0, z: 4980}
-  m_LocalScale: {x: 15, y: 1, z: 10000}
+  m_LocalScale: {x: 15, y: 0, z: 10000}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -513,7 +513,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014247240796, guid: 35bd8a915cb44194eac836447714f105, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000014247240796, guid: 35bd8a915cb44194eac836447714f105, type: 2}
       propertyPath: m_LocalPosition.z
@@ -786,7 +786,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2052552043}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -818,5 +818,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2052552048}
-  forwardForce: 2000
-  sidewaysForce: 200
+  forwardForce: 1111
+  sidewaysForce: 1111
+  jumpForce: 100
+  moveTolerance: 0.9
+  sideWayMode: 5
+  forwardMode: 5
+  jumpMode: 2
