@@ -27,7 +27,7 @@ GameObject:
   - 54: {fileID: 54000012042454346}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 114000014120875060}
-  gameManager: {fileID: 0}
 --- !u!114 &114000014120875060
 MonoBehaviour:
   m_ObjectHideFlags: 1
