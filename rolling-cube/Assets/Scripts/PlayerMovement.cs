@@ -19,6 +19,11 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
+        if (rb.position.y < -1f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
+
         if ((Math.Abs(rb.position.y - 1) < moveTolerance) == false) return;
                 
         if (Input.GetKey(KeyCode.D))
@@ -45,5 +50,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             rb.AddForce(0, jumpForce * Time.deltaTime, 0, jumpMode);
         }
+
+       
     }
 }
