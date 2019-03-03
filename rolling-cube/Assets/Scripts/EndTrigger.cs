@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Zenject;
 
-public class EndTrigger : MonoBehaviour {
+public class EndTrigger : MonoBehaviour
+{
 
-    public GameManager gameManager;
+  public GameManager gameManager;
 
-    // Use this for initialization
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-            gameManager.CompleteLevel();
-    }
+  // Use this for initialization
+  private void OnTriggerEnter(Collider other)
+  {
+    if (other.tag == "Player")
+      gameManager.CompleteLevel();
+  }
 }

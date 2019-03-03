@@ -18,30 +18,33 @@ public class PlayerMovement : MonoBehaviour {
     
 	// Update is called once per frame
 	void FixedUpdate () {
+      
 
         if (rb.position.y < -1f)
         {
             FindObjectOfType<GameManager>().EndGame();
         }
 
+        rb.AddForce(0, 0, forwardForce * Time.deltaTime, forwardMode);
+
         if ((Math.Abs(rb.position.y - 1) < moveTolerance) == false) return;
                 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, sideWayMode);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, sideWayMode);
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             rb.AddForce(0, 0, forwardForce * Time.deltaTime, forwardMode);
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             rb.AddForce(0, 0, -forwardForce * Time.deltaTime, forwardMode);
         }
