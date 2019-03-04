@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateService : IStateService
 {
-  private int currentLevel = 1;
+  private static int currentLevel = 1;
 
   public StateService()
   {
